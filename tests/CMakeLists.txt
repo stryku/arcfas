@@ -3,8 +3,8 @@ project(arcfas_tests)
 
 # GMOCK
 set(GMOCK_DIR ${CMAKE_SOURCE_DIR}/thirdparty/googletest)
-add_subdirectory(${GMOCK_DIR} ${CMAKE_BINARY_DIR}/gmock)
-include_directories(SYSTEM ${GMOCK_DIR}/include ${GMOCK_DIR}/gtest/include)
+add_subdirectory(${GMOCK_DIR} ${CMAKE_BINARY_DIR}/googlemock)
+include_directories(SYSTEM ${GMOCK_DIR}/googletest/include ${GMOCK_DIR}/googlemock/include)
 include_directories(${CMAKE_SOURCE_DIR}/src/)
 
 # TESTS
