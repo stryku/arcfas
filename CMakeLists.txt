@@ -17,7 +17,5 @@ else()
         message(STATUS "The compiler ${CMAKE_CXX_COMPILER} doesn't have C++11 support. Please use a different C++ compiler.")
 endif()
 
-# add_executable(arcfas main.cpp)
-
 add_subdirectory(src)
 add_subdirectory(tests)
