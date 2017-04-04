@@ -1,8 +1,5 @@
 language: generic
 
-os:
-- linux
-
 matrix:
   include:
     - os: linux
@@ -14,6 +11,12 @@ matrix:
           sources: &sources
             - llvm-toolchain-precise-3.8
             - ubuntu-toolchain-r-test
+      before_script:
+        - mkdir build
+        - cd build
+      script:
+        - cmake ..
+        - make
     - os: linux
       env: COMPILER_NAME=clang CXX=clang++-3.8 CC=clang-3.8
       addons:
@@ -21,13 +24,9 @@ matrix:
           packages:
             - clang-3.8
           sources: *sources
-
-before_script:
-- mkdir build
-- cd build
-
-script:
-- cmake ..
-- make
-- cd tests
-- ctest
+      before_script:
+        - mkdir build
+        - cd build
+      script:
+        - cmake ..
+        - make
