@@ -1,6 +1,9 @@
 #include <iostream>
 
+#include "TmpClass.hpp"
+
 int main ()
 {
-    std::cout << "Hello world!";
+    TmpClass test;
+    std::cout << test.foo();
 }

@@ -1,7 +1,9 @@
 #include <gmock/gmock.h>
 
+#include "TmpClass.hpp"
 
 TEST(Foo, simpleTest)
 {
-    EXPECT_TRUE(true);
+    TmpClass sut;
+    EXPECT_EQ(":eldo:", sut.foo());
 }
