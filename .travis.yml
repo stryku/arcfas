@@ -12,6 +12,8 @@ matrix:
             - llvm-toolchain-precise-3.8
             - ubuntu-toolchain-r-test
       before_script:
+        - sudo apt-get -qq update
+        - sudo apt-get install -y libboost-all-dev
         - mkdir build
         - cd build
       script:
@@ -27,6 +29,8 @@ matrix:
             - clang-3.8
           sources: *sources
       before_script:
+        - sudo apt-get -qq update
+        - sudo apt-get install -y libboost-all-dev
         - mkdir build
         - cd build
       script:
@@ -43,6 +47,8 @@ matrix:
             - valgrind
           sources: *sources
       before_script:
+        - sudo apt-get -qq update
+        - sudo apt-get install -y libboost-all-dev
         - mkdir build
         - cd build
       script:
