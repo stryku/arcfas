@@ -20,4 +20,4 @@ add_executable(arcfas_server $<TARGET_OBJECTS:arcfas_server_objs> )
 
 target_link_libraries(arcfas_server
         ${CMAKE_THREAD_LIBS_INIT}
-        ${ZEROMQ_LIBRARY} )
+        ${ZMQ_LIBRARIES} )

@@ -13,7 +13,7 @@ matrix:
             - ubuntu-toolchain-r-test
       before_script:
         - sudo apt-get -qq update
-        - sudo apt-get install -y libboost-all-dev
+        - sudo apt-get install -y libzmq3-dev libboost-all-dev
         - mkdir build
         - cd build
       script:
@@ -30,7 +30,7 @@ matrix:
           sources: *sources
       before_script:
         - sudo apt-get -qq update
-        - sudo apt-get install -y libboost-all-dev
+        - sudo apt-get install -y libzmq3-dev libboost-all-dev
         - mkdir build
         - cd build
       script:
@@ -48,7 +48,7 @@ matrix:
           sources: *sources
       before_script:
         - sudo apt-get -qq update
-        - sudo apt-get install -y libboost-all-dev
+        - sudo apt-get install -y libzmq3-dev libboost-all-dev
         - mkdir build
         - cd build
       script:

@@ -12,7 +12,7 @@ add_executable(fooTests Foo_ut.cpp $<TARGET_OBJECTS:arcfas_server_objs>)
 
 target_link_libraries(fooTests
         gmock_main
-        ${ZEROMQ_LIBRARY}
+        ${ZMQ_LIBRARIES}
         )
 
 # CTEST
