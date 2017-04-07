@@ -30,8 +30,7 @@ IF ( DEP_FOUND )
     INCLUDE_DIRECTORIES ( ${ZEROMQ_INCLUDE_DIR} )
     INCLUDE_DIRECTORIES ( ${BOOST_INCLUDE_DIR} )
 
-    add_subdirectory(src)
-    add_subdirectory(tests)
+    add_subdirectory(sources)
 ENDIF ( DEP_FOUND )
 
 
