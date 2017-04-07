@@ -17,5 +17,15 @@ else()
         message(STATUS "The compiler ${CMAKE_CXX_COMPILER} doesn't have C++11 support. Please use a different C++ compiler.")
 endif()
 
+include (Local.cmake)
+set (CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/modules")
+
+#ZeroMQ
+find_package (ZMQ REQUIRED)
+if (NOT ZMQ_FOUND)
+    message (ERROR "ZMQ not found!")
+endif()
+include_directories (${ZMQ_INCLUDE_DIR})
+
 add_subdirectory(src)
 add_subdirectory(tests)
