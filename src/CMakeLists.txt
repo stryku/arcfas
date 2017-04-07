@@ -10,4 +10,5 @@ add_library(${PROJECT_NAME} SHARED ${Sources})
 
 add_executable(arcfas ${Sources})
 
-target_link_libraries(arcfas_src)
+target_link_libraries(arcfas ${CMAKE_THREAD_LIBS_INIT}
+                             ${ZEROMQ_LIBRARY} )

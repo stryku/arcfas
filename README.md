@@ -5,3 +5,4 @@
 
 # Dependencies
 `apt-get install libzmq5-dev`
+`apt-get install libboost-all-dev`
