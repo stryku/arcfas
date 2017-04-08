@@ -25,7 +25,7 @@ matrix:
       script:
         - cmake ..
         - make
-        - cd tests
+        - cd sources/server/tests
         - ctest
     - os: linux
       env: COMPILER_NAME=clang CXX=clang++-3.8 CC=clang-3.8
