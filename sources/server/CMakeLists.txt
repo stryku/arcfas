@@ -10,7 +10,8 @@ MESSAGE("ARCFAS_SERVER_SRC_DIR: " ${ARCFAS_SERVER_SRC_DIR})
 
 INCLUDE(Sources.cmake)
 
-include_directories(${ARCFAS_SERVER_INC_DIR})
+include_directories(${ARCFAS_SERVER_INC_DIR}
+                    ${THIRDPARTY_INC_DIR})
 
 ADD_LIBRARY(arcfas_server_objs OBJECT ${ARCFAS_SERVER_SRC} ${ARCFAS_SERVER_INC})
 

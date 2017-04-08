@@ -1,7 +1,7 @@
 #include "TmpClass.hpp"
 
 #include <boost/array.hpp>
-#include <zmq.hpp>
+#include <zmq/zmq.hpp>
 
 #include <string>
 

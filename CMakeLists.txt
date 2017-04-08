@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.2.3 FATAL_ERROR)
 project(arcfas)
 
 include(CheckCXXCompilerFlag)
@@ -27,9 +27,10 @@ FIND_PACKAGE ( dep )
 IF ( DEP_FOUND )
     add_definitions(-std=c++1z)
 
-    INCLUDE_DIRECTORIES ( ${ZEROMQ_INCLUDE_DIR} )
-    INCLUDE_DIRECTORIES ( ${BOOST_INCLUDE_DIR} )
+    INCLUDE_DIRECTORIES (${ZEROMQ_INCLUDE_DIR})
+    INCLUDE_DIRECTORIES (${BOOST_INCLUDE_DIR})
 
+    add_subdirectory(thirdparty)
     add_subdirectory(sources)
 ENDIF ( DEP_FOUND )
 
