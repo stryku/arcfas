@@ -25,7 +25,7 @@ ENDIF ( ZMQ_FOUND )
 
 ### boost ###
 
-FIND_PACKAGE(Boost 1.58.0 COMPONENTS date_time filesystem system )
+FIND_PACKAGE(Boost 1.32.0 COMPONENTS date_time filesystem system )
 
 IF ( Boost_FOUND )
     SET ( DEP_FOUND TRUE )
