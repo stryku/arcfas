@@ -8,12 +8,16 @@ matrix:
         apt:
           packages:
             - g++-5
+            - cmake
+            - cmake-data
           sources: &sources
             - llvm-toolchain-precise-3.8
             - ubuntu-toolchain-r-test
+            - george-edison55-precise-backports
       before_script:
         - sudo apt-get -qq update
         - sudo apt-get install -y libzmq3-dev libboost-all-dev
+        - cmake --version
         - mkdir build
         - cd build
       script:
