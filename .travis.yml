@@ -8,16 +8,23 @@ matrix:
         apt:
           packages:
             - g++-5
+            - cmake
+            - cmake-data
+            - libboost1.55-all-dev
           sources: &sources
+            - boost-latest
             - llvm-toolchain-precise-3.8
             - ubuntu-toolchain-r-test
+            - george-edison55-precise-backports
       before_script:
+        - sudo apt-get -qq update
+        - sudo apt-get install -y libzmq3-dev
         - mkdir build
         - cd build
       script:
         - cmake ..
         - make
-        - cd tests
+        - cd sources/server/tests
         - ctest
     - os: linux
       env: COMPILER_NAME=clang CXX=clang++-3.8 CC=clang-3.8
@@ -25,14 +32,23 @@ matrix:
         apt:
           packages:
             - clang-3.8
-          sources: *sources
+            - cmake
+            - cmake-data
+            - libboost1.55-all-dev
+          sources: &sources
+            - boost-latest
+            - llvm-toolchain-precise-3.8
+            - ubuntu-toolchain-r-test
+            - george-edison55-precise-backports
       before_script:
+        - sudo apt-get -qq update
+        - sudo apt-get install -y libzmq3-dev
         - mkdir build
         - cd build
       script:
         - cmake ..
         - make
-        - cd tests
+        - cd sources/server/tests
         - ctest
     - os: linux
       env: COMPILER_NAME=clang CXX=clang++-3.8 CC=clang-3.8
@@ -41,11 +57,20 @@ matrix:
           packages:
             - clang-3.8
             - valgrind
-          sources: *sources
+            - cmake
+            - cmake-data
+            - libboost1.55-all-dev
+          sources: &sources
+            - boost-latest
+            - llvm-toolchain-precise-3.8
+            - ubuntu-toolchain-r-test
+            - george-edison55-precise-backports
       before_script:
+        - sudo apt-get -qq update
+        - sudo apt-get install -y libzmq3-dev
         - mkdir build
         - cd build
       script:
         - cmake ..
         - make
-        - valgrind --error-exitcode=42 --leak-check=full ./tests/fooTests
+        - valgrind --error-exitcode=42 --leak-check=full ./sources/server/tests/fooTests

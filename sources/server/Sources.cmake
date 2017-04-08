@@ -1,0 +1,7 @@
+
+SET(ARCFAS_SERVER_INC
+        ${ARCFAS_SERVER_INC_DIR}/TmpClass.hpp)
+
+SET(ARCFAS_SERVER_SRC
+        ${ARCFAS_SERVER_SRC_DIR}/TmpClass.cpp
+        ${ARCFAS_SERVER_SRC_DIR}/main.cpp)
