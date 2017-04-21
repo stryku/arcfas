@@ -4,4 +4,4 @@
 
 
 # Dependencies
-`sudo apt-get install -y libzmq5-dev libboost-all-dev`
+`sudo apt-get install -y libzmq3-dev libboost-all-dev`
